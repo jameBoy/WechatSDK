@@ -7,7 +7,7 @@
   <display-name></display-name>
   <servlet>
     <servlet-name>WeChatServlet</servlet-name>
-    <servlet-class>com.test.WeChatServlet</servlet-class>
+    <servlet-class>com.ifp.wechat.controller.WeChatServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>

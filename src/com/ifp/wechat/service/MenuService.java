@@ -112,6 +112,8 @@ public class MenuService {
 				sb6 });
 
 		Menu menu = new Menu(new Button[] { btn1, btn2, btn3 });
-		createMenu(menu);
+		int result = createMenu(menu);
+		log.info(result);
+		
 	}
 }
