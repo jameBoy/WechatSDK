@@ -113,7 +113,7 @@ public class MenuService {
 
 		Menu menu = new Menu(new Button[] { btn1, btn2, btn3 });
 		int result = createMenu(menu);
-		log.info(result);
+		log.info(""+result);
 		
 	}
 }
