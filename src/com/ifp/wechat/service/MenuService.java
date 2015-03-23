@@ -96,20 +96,32 @@ public class MenuService {
 
 	public static void main(String[] args) {
 //		getMenu();
-		Button sb2 = new Button("微客服", "click", "wchat_CustomerService_01", null, null);
-		Button btn1 = new Button("微服务", "click", null, null, new Button[] {sb2 });
-
-		Button sb3 = new Button("公司简介", "click", "23", null, null);
-		Button sb4 = new Button("有问必答", "click", "45", null, null);
 		
-		Button btn2 = new Button("音智达", "click", null, null, new Button[] {
-				sb3, sb4 });
-
-		Button sb6 = new Button("view类型", "view", null, "http://m.baidu.com",
-				null);
+		// 第二级菜单
+		Button btn1_1 = new Button("知果观点","view","btn1_1","http://www.zhiguoguo.com/index.shtml",null);
+		Button btn1_2 = new Button("思聊","view","btn1_2","http://s.zhiguoguo.com/",null);
+		Button btn1_3 = new Button("","","",null,null);
+		Button btn1_4 = new Button("","","",null,null);
+		Button btn1_5 = new Button("","","",null,null);
+		//第一级菜单
+		Button btn1 = new Button("涨知识","click","btn1",null,new Button[]{btn1_1,btn1_2});
+	
+		Button btn2_1 = new Button("成为会员","view","btn2_1","http://www.zhiguoguo.com/reg",null);
+		Button btn2_2 = new Button("订单查询","view","btn2_1","http://www.zhiguoguo.com/user/order?act=1",null);
+		Button btn2_3 = new Button("","","",null,null);
+		Button btn2_4 = new Button("","","",null,null);
+		Button btn2_5 = new Button("","","",null,null);
+		Button btn2 = new Button("知果会员","click","btn2",null,new Button[]{btn2_1,btn2_2});
 		
-		Button btn3 = new Button("最新动态", "click", null, null, new Button[] {
-				sb6 });
+		Button btn3_1 = new Button("知果果网","view","btn3_1","http://www.zhiguoguo.com/index.shtml",null);
+		Button btn3_2 = new Button("免费注册商标","view","btn3_2","http://www.zhiguoguo.com/product/show/tr_reg",null);
+		Button btn3_3 = new Button("","","",null,null);
+		Button btn3_4 = new Button("","","",null,null);
+		Button btn3_5 = new Button("","","",null,null);
+		Button btn3 = new Button("免费商标","click","btn3",null,new Button[]{btn3_1,btn3_2});
+		
+		
+	
 
 		Menu menu = new Menu(new Button[] { btn1, btn2, btn3 });
 		int result = createMenu(menu);

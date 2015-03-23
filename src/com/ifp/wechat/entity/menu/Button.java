@@ -15,12 +15,21 @@ public class Button {
 	private String name;
 
 	/**
-	 * 按钮类型
+	 * 按钮类型   
+     * 1、click：点击推事件
+     * 2、view：跳转URL
+	 * 3、scancode_push：扫码推事件
+	 * 4、scancode_waitmsg：扫码推事件且弹出“消息接收中”提示框
+	 * 5、pic_sysphoto：弹出系统拍照发图
+	 * 6、pic_photo_or_album：弹出拍照或者相册发图
+	 * 7、pic_weixin：弹出微信相册发图器
+	 * 8、location_select：弹出地理位置选择器
+	 * 3到8的所有事件，仅支持微信iPhone5.4.1以上版本，和Android5.4以上版本的微信用户，旧版本微信用户点击后将没有回应，开发者也不能正常接收到事件推送。
 	 */
 	private String type;
 
 	/**
-	 * 按钮key值
+	 * 按钮key值    菜单KEY值，用于消息接口推送，不超过128字节
 	 */
 	private String key;
 

@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -56,7 +57,7 @@ public class WeChatServlet extends HttpServlet {
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
-		response.setCharacterEncoding("UTF-8");
+		 ((ServletRequest) response).setCharacterEncoding("UTF-8");
 
 		// 调用核心业务类接收消息、处理消息
 		String respMessage = CoreService.processWebchatRequest(request);
